@@ -1,5 +1,5 @@
 ##==============================================================================
-## Script for fitting stan models to first year of 2 year data
+## Script for fitting stan models to nearshore data
 ## Code author: J.R. Blaszczak
 ##==============================================================================
 
@@ -9,7 +9,7 @@ lapply(c("plyr","dplyr","ggplot2","cowplot","lubridate",
          "MCMCglmm"), require, character.only=T)
 
 ## Source data
-source("DataSource_6rivers_StreamLight.R")
+df <- readRDS("../data/SFS24_data_T.rds")
 
 ####################
 ## Stan data prep ##
