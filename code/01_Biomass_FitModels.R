@@ -10,12 +10,14 @@ lapply(c("plyr","dplyr","ggplot2","cowplot","lubridate",
 
 ## Source data
 df <- readRDS("../data/SFS24_data_T.rds")
+head(df)
+colnames(df)
 
 ####################
 ## Stan data prep ##
 ####################
 rstan_options(auto_write=TRUE)
-options(mc.cores=16)
+options(mc.cores=4)
 
 stan_data_compile <- function(x){
   data <- list(Ndays=length(x$GPP), light = x$light_rel_PAR, GPP = x$GPP,
