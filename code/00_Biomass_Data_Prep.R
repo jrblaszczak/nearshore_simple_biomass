@@ -14,7 +14,7 @@ data$date <- as.POSIXct(as.character(data$date), format="%Y-%m-%d")
 data[which(data$middle_GPP < 0),]
 data[which(data$middle_ER > 0),]
 
-
+#test
 
 
 
